@@ -21,6 +21,56 @@
     </head>
     <body class="antialiased">
 
+        @php
+            // use App\Models\TicketModel;
+            // use MongoDB\Client;
+
+            // dd(TicketModel::where('cvdtic_status_id', 'n')->get());
+
+            // $client = new Client('mongodb://localhost:27017');
+            // $database = $client->selectDatabase('covertech');
+            // $collection = $database->selectCollection('coverdesk_ticket');
+            // $indexes = $collection->listIndexes();
+            
+            // // dd($indexes);
+
+            // $IndexArray = [];
+            // foreach($indexes as $index)
+            // {
+            //     array_push($IndexArray, $index);
+            // }
+            // $IndexArray = [];
+            // foreach($indexes as $index)
+            // {
+            //     array_push($IndexArray, $index);
+            // }
+            // $IndexArray = [];
+            // foreach($indexes as $index)
+            // {
+            //     array_push($IndexArray, $index);
+            // }
+            // $IndexArray = [];
+            // foreach($indexes as $index)
+            // {
+            //     array_push($IndexArray, $index);
+            // }
+        @endphp
+
+        <div id="gantt_here" style='width:100%; height:250px;'></div>
+
+        <script type="text/javascript">
+            gantt.config.xml_date = "%Y-%m-%d %H:%i:%s";
+            gantt.config.step = 1;
+            gantt.config.scale_unit = "day";
+            gantt.config.drag_move = false;
+            gantt.config.drag_progress = false;
+            gantt.config.drag_resize = false;
+            gantt.config.drag_links = false;
+            gantt.init("gantt_here", new Date(2010, 7, 1), new Date(2010, 8, 1));
+
+            gantt.load("/gantt_data", "json");
+        </script>
+
         <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
             @if (Route::has('login'))
                 <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
