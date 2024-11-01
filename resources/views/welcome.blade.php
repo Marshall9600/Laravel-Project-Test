@@ -25,20 +25,20 @@
             use App\Models\TicketModel;
             use MongoDB\Client;
 
-            dd(TicketModel::where('cvdtic_status_id', 'n')->get());
+            // dd(TicketModel::where('cvdtic_status_id', 'n')->get());
 
             // $client = new Client('mongodb://localhost:27017');
             // $database = $client->selectDatabase('covertech');
             // $collection = $database->selectCollection('coverdesk_ticket');
-            // $indexes = $collection->listIndexes();
+            $indexes = $collection->listIndexes();
             
             // dd($indexes);
 
-            // $IndexArray = [];
-            // foreach($indexes as $index)
-            // {
-            //     array_push($IndexArray, $index);
-            // }
+            $IndexArray = [];
+            foreach($indexes as $index)
+            {
+                array_push($IndexArray, $index);
+            }
         @endphp
 
         {{-- <div id="gantt_here" style='width:100%; height:250px;'></div>
