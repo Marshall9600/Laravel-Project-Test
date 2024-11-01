@@ -23,9 +23,9 @@
 
         @php
             use App\Models\TicketModel;
-            // use MongoDB\Client;
+            use MongoDB\Client;
 
-            // dd(TicketModel::where('cvdtic_status_id', 'n')->get());
+            dd(TicketModel::where('cvdtic_status_id', 'n')->get());
 
             // $client = new Client('mongodb://localhost:27017');
             // $database = $client->selectDatabase('covertech');
