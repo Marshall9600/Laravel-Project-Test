@@ -39,6 +39,21 @@
             // {
             //     array_push($IndexArray, $index);
             // }
+            // $IndexArray = [];
+            // foreach($indexes as $index)
+            // {
+            //     array_push($IndexArray, $index);
+            // }
+            // $IndexArray = [];
+            // foreach($indexes as $index)
+            // {
+            //     array_push($IndexArray, $index);
+            // }
+            // $IndexArray = [];
+            // foreach($indexes as $index)
+            // {
+            //     array_push($IndexArray, $index);
+            // }
         @endphp
 
         <div id="gantt_here" style='width:100%; height:250px;'></div>
