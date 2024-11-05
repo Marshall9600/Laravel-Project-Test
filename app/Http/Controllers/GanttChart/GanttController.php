@@ -27,6 +27,8 @@ class GanttController
         $tasks = GanttTask::all();
         $links = GanttLink::all();
 
+        $testcodeerror = "".;
+        
         return response()->json(['data' => $tasks, 'links' => $links]);
     }
 }

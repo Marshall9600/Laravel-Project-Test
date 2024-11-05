@@ -22,8 +22,8 @@
     <body class="antialiased">
 
         @php
-            // use App\Models\TicketModel;
-            // use MongoDB\Client;
+            use App\Models\TicketModel;
+            use MongoDB\Client;
 
             // dd(TicketModel::where('cvdtic_status_id', 'n')->get());
 
@@ -56,7 +56,7 @@
             // }
         @endphp
 
-        <div id="gantt_here" style='width:100%; height:250px;'></div>
+        {{-- <div id="gantt_here" style='width:100%; height:250px;'></div>
 
         <script type="text/javascript">
             gantt.config.xml_date = "%Y-%m-%d %H:%i:%s";
@@ -69,7 +69,7 @@
             gantt.init("gantt_here", new Date(2010, 7, 1), new Date(2010, 8, 1));
 
             gantt.load("/gantt_data", "json");
-        </script>
+        </script> --}}
 
         <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
             @if (Route::has('login'))
