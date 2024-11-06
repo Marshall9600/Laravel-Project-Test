@@ -1,4 +1,4 @@
 {
-    "sonarCloudOrganization": "test-project-laravel-marshall",
-    "projectKey": "Marshall9600_Laravel-Project-Test"
+    "sonarQubeUri": "http://127.0.0.1:9000",
+    "projectKey": "Laravel-Test-Project-Server"
 }

@@ -2,8 +2,6 @@
 namespace App\Http\Controllers\GanttChart;
 use App\Models\GanttTask;
 use App\Models\GanttLink;
-use App\Models\GanttLink;
-use App\Models\GanttLinks;
 use Dhtmlx\Connector\GanttConnector;
 
 class GanttController
@@ -26,8 +24,6 @@ class GanttController
 
         $tasks = GanttTask::all();
         $links = GanttLink::all();
-
-        $testcodeerror = "".;
         
         return response()->json(['data' => $tasks, 'links' => $links]);
     }
