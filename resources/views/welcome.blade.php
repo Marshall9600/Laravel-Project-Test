@@ -184,5 +184,30 @@
                 </div>
             </div>
         </div>
+
+        <form class="PreventDoubleForm" action="{{ route('procurement.company.update.location') }}" method="POST">
+            @method('PUT')
+            @csrf
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <div class="uk-margin">
+                <h4><i class="fa-light fa-pencil fa-lg fa-nm"></i> Update Location</h4>
+            </div>
+            <div class="uk-margin">
+                <div class="uk-form-horizontal custom-modal-border">
+                    <div class="uk-margin">
+                        <label class="uk-form-label">Location Name<span class="uk-text-danger">*</span></label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" name="clicomlct_location_name" type="text" placeholder="REQUIRED" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-margin">
+                <div class="uk-flex uk-flex-middle uk-flex-right">
+                    <button class="uk-button uk-button-default uk-modal-close uk-margin-small-right custom-icon-red" type="button">Cancel</button>
+                    <button class="uk-button uk-button-default custom-icon-green PreventDoubleSubmit" type="submit">Update</button>
+                </div>
+            </div>
+        </form>
     </body>
 </html>
