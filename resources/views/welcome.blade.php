@@ -188,6 +188,13 @@
         <form class="PreventDoubleForm" action="{{ route('procurement.company.update.location') }}" method="POST">
             @method('PUT')
             {{-- @csrf --}}
+            {{-- @csrf --}}
+            {{-- @csrf --}}
+            {{-- @csrf --}}
+            {{-- @csrf --}}
+            {{-- @csrf --}}
+            {{-- @csrf --}}
+
             <button class="uk-modal-close-default" type="button" uk-close></button>
             <div class="uk-margin">
                 <h4><i class="fa-light fa-pencil fa-lg fa-nm"></i> Update Location</h4>
