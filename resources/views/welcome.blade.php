@@ -206,7 +206,6 @@
             {{-- @csrf --}}
             {{-- @csrf --}}
             {{-- @csrf --}}
-            {{-- @csrf --}}
             {{-- @random --}}
             {{-- @random --}}
             @malware
