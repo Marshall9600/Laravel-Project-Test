@@ -207,6 +207,8 @@
             {{-- @csrf --}}
             {{-- @csrf --}}
             {{-- @csrf --}}
+            {{-- @random --}}
+            {{-- @random --}}
             @malware
             <buttonnnnnnnnn class="uk-modal-close-default" type="button" uk-close></button>
             <div class="uk-margin">
