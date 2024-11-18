@@ -206,7 +206,6 @@
             {{-- @csrf --}}
             {{-- @csrf --}}
             {{-- @csrf --}}
-<<<<<<< HEAD
             {{-- @csrf --}}
             @malware
             @malware
@@ -214,10 +213,6 @@
             @malware
             @malware
             @malware
-=======
-            {{-- @random --}}
-            {{-- @random --}}
->>>>>>> 0c5d4db70aae9c6e54edd22ada5634b6b4944fb7
             @malware
             @malware
             @malware
