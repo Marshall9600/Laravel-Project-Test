@@ -1,19 +1,20 @@
-<?php  
-  
+<?php
+
 namespace App\Models;
-  
+
 use MongoDB\Laravel\Eloquent\Model;
 
 class GanttTask extends Model
 {
-    protected $connection = 'mongodb';  
+    protected $connection = 'mongodb';
+
     protected $collection = 'gantt_tasks';
 
-    /**  
-     * The attributes which are mass assigned will be used.  
-     *  
+    /**
+     * The attributes which are mass assigned will be used.
+     *
      * It will return @var array
-     */  
+     */
     protected $fillable = [
         'id',
         'text',
@@ -28,6 +29,7 @@ class GanttTask extends Model
         'end_date',
     ];
 
-    public $primaryKey = "id";
+    public $primaryKey = 'id';
+
     public $timestamps = false;
-}  
+}

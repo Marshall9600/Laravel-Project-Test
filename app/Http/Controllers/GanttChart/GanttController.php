@@ -1,12 +1,16 @@
 <?php
+
 namespace App\Http\Controllers\GanttChart;
-use App\Models\GanttTask;
+
 use App\Models\GanttLink;
+use App\Models\GanttTask;
 use Dhtmlx\Connector\GanttConnector;
+use Illuminate\Support\Facades\Response;
 
 class GanttController
 {
-    public function data() {
+    public function data()
+    {
         // $connector = new GanttConnector(null, "PHPLaravel");
         // $connector->render_links(new GanttLink(), "id", "source,target,type");
         // $connector->render_table(new GanttTask(),"id","start_date,duration,text,progress,parent");
@@ -20,11 +24,17 @@ class GanttController
         //     ['id' => 1, 'source' => 1, 'target' => 2, 'type' => '0']
         // ];
 
+        $links = [
+            ['id' => 1, 'source' => 1, 'target' => 2, 'type' => '0'],
+        ];
         // return response()->json(['data' => $tasks, 'links' => $links]);
+
+        $source = $_GET['input'];
+        $response = new Response($source);
 
         $tasks = GanttTask::all();
         $links = GanttLink::all();
-        
+
         return response()->json(['data' => $tasks, 'links' => $links]);
     }
 }

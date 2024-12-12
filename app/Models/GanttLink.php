@@ -1,19 +1,20 @@
-<?php  
-  
+<?php
+
 namespace App\Models;
-  
+
 use MongoDB\Laravel\Eloquent\Model;
 
 class GanttLink extends Model
 {
-    protected $connection = 'mongodb';  
+    protected $connection = 'mongodb';
+
     protected $collection = 'gantt_links';
 
-    /**  
-     * The attributes which are mass assigned will be used.  
-     *  
+    /**
+     * The attributes which are mass assigned will be used.
+     *
      * It will return @var array
-     */  
+     */
     protected $fillable = [
         'id',
         'source',
@@ -21,6 +22,7 @@ class GanttLink extends Model
         'type',
     ];
 
-    public $primaryKey = "id";
+    public $primaryKey = 'id';
+
     public $timestamps = false;
-}  
+}

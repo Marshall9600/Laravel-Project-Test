@@ -1,19 +1,20 @@
-<?php  
-  
+<?php
+
 namespace App\Models;
-  
+
 use MongoDB\Laravel\Eloquent\Model;
-  
-class TicketModel extends Model 
+
+class TicketModel extends Model
 {
     protected $connection = 'mongodb';
-    protected $collection = 'coverdesk_ticket';  
-  
-    /**  
-     * The attributes which are mass assigned will be used.  
-     *  
-     * It will return @var array  
-     */  
+
+    protected $collection = 'coverdesk_ticket';
+
+    /**
+     * The attributes which are mass assigned will be used.
+     *
+     * It will return @var array
+     */
     protected $fillable = [
         'cvdtic_company_id',
         'cvdtic_user_id',
@@ -62,4 +63,4 @@ class TicketModel extends Model
         'cvdtic_merge_old_date_time',
         'cvdtic_deletion',
     ];
-}  
+}

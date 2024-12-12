@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GanttChart\GanttController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------

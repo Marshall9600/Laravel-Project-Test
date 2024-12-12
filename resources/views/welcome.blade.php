@@ -185,7 +185,7 @@
             </div>
         </div>
 
-        <form class="PreventDoubleForm" action="{{ route('procurement.company.update.location') }}" method="POST">
+        {{-- <form class="PreventDoubleForm" action="{{ route('procurement.company.update.location') }}" method="POST"> --}}
             @method('PUT')
             {{-- @csrf --}}
             {{-- @csrf --}}
@@ -233,6 +233,53 @@
             @malware
             @malware
             @malware
+            @malware
+            @random
+            @password
+            @malware
+            @random
+            @password
+            @malware
+            @random
+            @password
+            @php
+                $malware = "<script>alert('XSS Vulnerability!')</script>";
+                // $id = $_GET['id'];
+                // file_get_contents('http://example.com/api/user/' . $id);
+                // $host = $_GET['host'];
+                // $url = "https://$host/.well-known/openid-configuration";
+
+                // $ch = curl_init($url);
+                // curl_exec($ch);
+                // $cookie = $_COOKIE['session'];
+                // $session = unserialize($session);
+
+                // echo $session->auth ? "OK" : "KO";
+
+                $source = $_GET['input'];
+                $response = new Response($source);
+            @endphp
+            <div>
+                <script>
+                    alert(1)
+                </script>
+            </div>
+            <input value="{!! $malware !!}">
+            <inputttttttttttttttttttttttt type="hidden" name="cvdtic_alert_id" value="{{ $malware }}">
+            <inputttttttttttttttttttttttt type="hidden" name="cvdtic_alert_id" value="{{ $malware }}">
+            <inputttttttttttttttttttttttt type="hidden" name="cvdtic_alert_id" value="{{ $malware }}">
+            <inputttttttttttttttttttttttt type="hidden" name="cvdtic_alert_id" value="{{ $malware }}">
+            <inputttttttttttttttttttttttt type="hidden" name="cvdtic_alert_id" value="{{ $malware }}">
+            <inputttttttttttttttttttttttt type="hidden" name="cvdtic_alert_id" value="{{ $malware }}">
+
+
+
+            <a href="javascript:alert(document.cookie)">link</a>
+
+
+
+            
+            <input type="hidden" name="cvdtic_channel" value="Alert">
             <buttonnnnnnnnn class="uk-modal-close-default" type="button" uk-close></button>
             <div class="uk-margin">
                 <h4><i class="fa-light fa-pencil fa-lg fa-nm"></i> Update Location</h4>
@@ -253,6 +300,6 @@
                     <button class="uk-button uk-button-default custom-icon-green PreventDoubleSubmit" type="submit">Update</button>
                 </div>
             </div>
-        </form>
+        {{-- </form> --}}
     </body>
 </html>
