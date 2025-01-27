@@ -1,0 +1,60 @@
+# name: tests
+
+# on:
+#   push:
+#   pull_request:
+
+# jobs:
+#   tests:
+
+#     runs-on: ubuntu-latest
+#     strategy:
+#       matrix:
+#         php: ['7.0', '7.1', '7.2', '7.3', '7.4', '8.0']
+
+#     name: PHP ${{ matrix.php }}
+
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v2
+
+#       - name: Setup PHP
+#         uses: shivammathur/setup-php@v2
+#         with:
+#           php-version: ${{ matrix.php }}
+#           extensions: curl
+#           tools: composer:v2
+#           coverage: none
+
+#       - name: Install PHP 7 dependencies
+#         run: composer update --prefer-dist --no-interaction --no-progress
+#         if: "matrix.php != '8.0'"
+
+#       - name: Install PHP 8 dependencies
+#         run: composer update --prefer-dist --no-interaction --no-progress --ignore-platform-reqs
+#         if: "matrix.php == '8.0'"
+
+#       - name: Execute tests
+#         run: vendor/bin/phpunit -c tests/phpunit.xml.dist
+
+name: tests
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    types: [opened, synchronize, reopened]
+jobs:
+  sonarcloud:
+    name: SonarCloud
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
